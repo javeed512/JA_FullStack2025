@@ -1,0 +1,16 @@
+IP - address
+
+It is a unique address/identity given to the every inidividual machine
+
+IPv4 ---> 0-255
+IPv6  ---> 
+
+Ex:  1.29.0.101   , 2.202.100.99 
+
+Local machine:  localhost ---> local machine ip-address
+
+
+Port Number:
+its an unique 4 digit number which is given to every application/software installed in our machine
+
+Ex: mysql port : 3306  , tomcat server port: 8808 , notepad port: 2022

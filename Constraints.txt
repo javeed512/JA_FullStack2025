@@ -1,0 +1,103 @@
+
+Constraints :
+
+Set of rules in RDBMS.
+
+PRIMARY KEY  = (Unique + Not Null)
+
+Foreign Key = It allows only set of values exist in P.K (including duplicate) 
+			and Null value is allowed 
+
+Not Null =  It does not allow  null value (it is possible only at column)
+
+Unique   =  It allows unique values only (no duplicates) and Null value allowed
+
+Check    =  It is used to create custom conditions/rules in RDBMS
+
+
+Examples with different constraints:
+------------------------------------
+
+CREATE TABLE Student (
+   		 sid integer(4) primary key  ,
+		 sname varchar(20) NOT NULL  DEFAULT 'NOT GIVEN',
+		 dob  date ,
+		 mobileno  integer(10) UNIQUE  ,
+		 gender  char(1) ,
+ 		 CHECK (gender IN ('M','F') )	
+	
+		);
+
+
+
+ CREATE TABLE Course (
+		
+	 cid  integer(5) UNIQUE NOT NULL ,
+         cname  varchar(20) NOT NULL ,
+         fee    decimal(7) ,
+	 sid    integer(4) ,
+	 Foreign Key(sid)   references  student(sid) ,
+
+     CONSTRAINT  course_fee_cname_chk  CHECK (fee > 500 AND cname IN ('Java','Python','SQL')   	) 
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE Emp 
+(
+	eid integer  ,
+	ename varchar(20)  ,
+	salary double(7,2) ,
+	doj   date ,
+	 
+	 PRIMARY KEY (eid , ename)
+	
+);
+
+
+CREATE TABLE Dept 
+(
+
+	dno integer,
+	dname varchar(20) ,
+	location  varchar(20) ,
+	eid integer ,
+        ename varchar(20) ,
+
+	FOREIGN KEY(eid,ename) references Emp(eid, ename)
+
+
+);
+
+--------------------------------
+CREATE TABLE Persons (
+    ID int 	UNIQUE,
+    Name varchar(255) NOT NULL, 
+    Age int,
+    City varchar(255),
+    CONSTRAINT CHK_Person CHECK (Age>=18 AND City='Sandnes')
+);
+CREATE TABLE Account (
+	acno int ,
+	type  varchar(20),
+	id  int ,
+	
+	FOREIGN KEY(id)  references  Persons(id)  ON DELETE CASCADE
+	
+);
+
+
