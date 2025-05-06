@@ -3,7 +3,7 @@ SELECT:
 Select command is used to fetch data from one or more tables.
 
 
-syn:  select col1,col2...  from table1,table2  where  [operators for filer] 
+syn:  select col1,col2...  from table1,table2  where  [operators for filter] 
 
 	Group By ..  Having clause  ..  Order By;
 

@@ -4,7 +4,8 @@ These are the functions take set of values as input (one column) as return singl
 
 In this input and output data type may or may not be same.
 
-Note: Group functions always ignore Null values. But Group By clause consider Null Values for grouping.
+Note: Group functions always ignore Null values.
+ But Group By clause consider Null Values for grouping.
 
 SUM , AVG , MIN , MAX , COUNT
 
