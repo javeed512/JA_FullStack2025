@@ -1,0 +1,147 @@
+
+Joins are used to combine tables and fetch records based on common column.
+Most of the time tables will have Primary key and Foreign as a common column.
+But its not mandatory to have PK and FK , just a common column is required for joins. 
+
+Common Columns: Two columns with same data types,same size , same values known as commom columns.
+
+Joins are given by Oracle as well as by ANSI People
+
+
+Oracle Join Examples:
+Equi-Join , Non-Equi Join , Outer Join , Self Join
+
+Equi-Join :
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM   Employee E  , Dept D
+    -> WHERE  E.dno = D.dno;
+
+Non-Equi Join
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   
+		FROM   Employee E  , Dept D
+             WHERE  E.dno != D.dno;
+
+
+ANSI Joins:
+
+INNER Join  with = / Equi Join:
+------------
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM   
+                    Employee E  INNER JOIN   Dept D  where  E.DNO = D.DNO;
+
+INNER JOIN with != / Non-Equi Join:
+------------------------
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM   
+                    Employee E  INNER JOIN   Dept D  where  E.DNO != D.DNO;
+
+JOIN with ON clause:
+--------------------
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM   Employee E  JOIN Dept D
+    -> ON ( E.dno = D.dno );
+
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM   Employee E  JOIN Dept D
+    -> ON ( E.dno = D.dno )  AND  JOB !=  'Tester';
+
+
+NATURAL JOIN:
+-------------
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM   Employee E  NATURAL JOIN Dept D  ;
+
+
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM   Employee E  NATURAL JOIN Dept D
+    -> WHERE  Job != 'Developer';
+
+
+
+USING Clause:
+---------------
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM   Employee E  JOIN Dept D
+    -> USING(DNO);
+
+Note: In sql , we use USING clause when there are same columns names but different data types.
+Using clause does not required alias names.
+
+
+
+OUTER JOINS:
+------------
+LEFT OUTER JOIN : It is used to fetch all records from left side table which are (matching and non matching) with right side table.
+Note: For non matching record it fill Null values at opposite side table. 
+
+
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM                                        Employee E  LEFT OUTER JOIN  Dept D   ON(D.DNO = E.DNO);
+
+Outer Joins does not support where clause for comparing common columns , but we can use ON clause for same.
+Note: For other condition like Job = 'Developer' or Salary > 50000 we can use AND  in outer join
+
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM                                                   Employee E  LEFT OUTER JOIN  Dept D   ON E.DNO = D.DNO  AND  d.dno =10  ;
+
+
+
+RIGHT OUTER JOIN :
+--------------------
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM                                        Employee E  RIGHT OUTER JOIN  Dept D   ON(D.DNO = E.DNO);
+
+FULL OUTER JOIN using UNION in MYsql:
+---------------------------------------
+Note: Mysql does not support Full Outer Join but we can get it using UNION option.
+
+mysql> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM                                        Employee E  LEFT OUTER JOIN  Dept D   ON(D.DNO = E.DNO)  UNION
+    -> SELECT  eid , ename , salary , job , D.dno , dname , location   FROM                                        Employee E  RIGHT OUTER JOIN  Dept D   ON(D.DNO = E.DNO);
+
+
+
+
+SELF JOINS:
+----------
+JOINING table  to itself is known as self-join.
+
+
+mysql> select  E.eid,E.mid , M.eid, M.mid   from Employee E  , Employee M  WHERE E.MID = M.EID;
++-----+------+-----+------+
+| eid | mid  | eid | mid  |
++-----+------+-----+------+
+| 102 |  101 | 101 | NULL |
+| 103 |  101 | 101 | NULL |
+| 104 |  102 | 102 |  101 |
+| 105 |  102 | 102 |  101 |
+| 106 |  103 | 103 |  101 |
+| 107 |  103 | 103 |  101 |
+| 108 |  101 | 101 | NULL |
++-----+------+-----+------+
+7 rows in set (0.00 sec)
+
+mysql> select  E.ENAME , M.ENAME  from Employee E  , Employee M  WHERE E.MID = M.EID;
++-------+-------+
+| ENAME | ENAME |
++-------+-------+
+| Smith | King  |
+| Ford  | King  |
+| Tom   | Smith |
+| Scott | Smith |
+| Jerry | Ford  |
+| Ravi  | Ford  |
+| Adam  | King  |
++-------+-------+
+7 rows in set (0.00 sec)
+
+mysql> select  E.ENAME ,E.SALARY,  M.ENAME , M.SALARY from Employee E  , Employee M  WHERE E.MID = M.EID;
++-------+----------+-------+----------+
+| ENAME | SALARY   | ENAME | SALARY   |
++-------+----------+-------+----------+
+| Smith | 45000.00 | King  | 50000.00 |
+| Ford  | 40000.00 | King  | 50000.00 |
+| Tom   | 30000.00 | Smith | 45000.00 |
+| Scott | 35000.00 | Smith | 45000.00 |
+| Jerry | 25000.00 | Ford  | 40000.00 |
+| Ravi  | 22000.00 | Ford  | 40000.00 |
+| Adam  | 47000.00 | King  | 50000.00 |
++-------+----------+-------+----------+
+
+
+
+
+
+
+
+
+
