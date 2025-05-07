@@ -1,0 +1,57 @@
+
+
+Revision needs for Collections:
+
+Inheritance for classes and interfaces
+
+Interface and Implementation class
+
+Wrapper class
+
+Object class: equals() , hashcode() , toString()
+
+String class: compareTo() 
+
+
+Arrays :
+
+int  ar[] = new int[400]; // 1,2,3  , "tom" , 4.5 , true 
+
+String names[] = new String[5];
+
+interface RandomAccess{ // Marker interface
+
+}
+Ex: RandomAccess, Cloneable , Serializable ....
+
+class  ArrayList extends Object implements List , RandomAccess{
+
+
+
+
+}
+
+
+Object o = new String();
+	=  new Integer();
+	= new Double();
+	= new Employee();
+
+	= new ArrayList();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

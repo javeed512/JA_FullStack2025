@@ -1,0 +1,43 @@
+
+
+Object class:
+---------------
+
+
+equals() --> compare hashcode or reference of two diff objects
+
+toString() ---> print hashcode in text format
+
+hashcode() --> hashcode in the integer format
+
+
+final class String extends Object{
+
+	@override
+	public String toString(){
+			
+	return string object value;
+
+	}
+	
+	@override
+	public boolean equals(){
+
+		// it compare values of two strings
+	}
+
+	// equalsIgnoreCase()
+	// compareTo()
+
+	// length()
+	// startsWith()
+	// endsWith()
+
+	// charAt()
+	// indexOf()
+
+	//substring()
+
+
+
+}  

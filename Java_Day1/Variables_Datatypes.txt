@@ -1,0 +1,59 @@
+
+
+ int  x = 50;  // primitive
+
+ String s1 = "hello";  // non-primitive or reference type
+
+class Student{
+
+
+}
+
+
+  Student  s =   new  Student();
+
+  Integer  i = new Integer();
+
+
+Local Variables:
+Any variable declare inside method or block or method parameter is known as local variable.
+class Student{
+
+	public Student(int x){
+		
+		int  z = 100;
+	}
+
+
+
+	public static void main(String ar[]){
+		
+	  final	int  id = 10;
+		String name = "king";
+
+		
+		if(5>2){ // block
+
+			int x = 9; // scope or visibility 
+		}
+		
+
+	}
+
+
+}
+
+
+
+
+
+Tips:
+
+In java every number is consider by default as integer and every decimal value as double
+
+
+
+
+
+
+

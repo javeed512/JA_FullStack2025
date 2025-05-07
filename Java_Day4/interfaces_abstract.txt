@@ -1,0 +1,57 @@
+
+
+class A,B,C
+
+class A extends B
+
+class B  extends C 
+
+--------------------
+
+interface  I1,I2 , I3
+
+interface  I1 extends I2,I3 { // multiple inheritance
+
+	public abstract void m1(); 
+
+	// From Java-8
+
+
+	public static void m2(){
+	
+	}	
+	public default void m3(){
+
+
+	}
+
+
+}
+
+class A  implements  I1 ,I2 , I3 {
+
+
+
+}
+
+
+
+
+public class  ImpDemo  implements  MyInterface{
+
+	public void show(){
+		// logic
+	}
+
+	public static void main(){
+
+	ImpDemo  d = new ImpDemo();
+
+		d.show();
+
+
+	}
+}
+
+
+Note: In java always try to store  implementation class objects in interface ref variable

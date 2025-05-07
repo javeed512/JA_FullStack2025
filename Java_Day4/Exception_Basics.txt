@@ -1,0 +1,52 @@
+
+
+Exception Handling:
+
+
+throws  --> it throws exception from callee to the caller (it never handle exception)
+
+try-catch --> using try-catch we can handle exceptions in java
+
+finally
+
+
+throw
+
+
+Notes:
+
+try block executes always
+
+catch block executes only when exception occurs.
+
+
+
+
+
+
+try{
+
+}
+catch(){
+}
+catch(){
+}
+
+finally{
+
+// closing file
+// closing database connection
+// cleaning memoryy
+// gc();
+// logout
+
+}
+
+
+System.exit();  // it will kill/ terminate JVM
+
+
+
+
+
+ 

@@ -1,0 +1,52 @@
+
+java.util.Scanner;
+
+Scanner class
+
+
+ next()  --> one word at a time
+ nextLine() --> can read one line of data
+
+ 
+ nextXX();
+
+ Ex:  nextInt() , nextDouble() , nextLong() , nextByte() .....  
+ 
+"500"  --> nextInt() ---> 500
+"4.555" ---> nextDouble() ---> 4.555
+"123456"
+
+
+java.io.*;
+
+PrintStream  { print() , println()}
+InputStream
+
+
+java.lang.System; // utility
+
+class System{
+
+
+ public static  PrintStream  out  = new PrintStream();
+ public static  PrintStream err = new PrintStream();
+
+ public static  InputStream in = new InputStream();
+
+ public void gc(){
+
+		//logic to clean objects
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+

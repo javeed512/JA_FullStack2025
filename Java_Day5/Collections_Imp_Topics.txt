@@ -1,0 +1,110 @@
+
+java.lang.Comparable;
+
+interface Comparable {
+
+	int  compareTo();
+
+}
+
+class  Integer/Double/Long/Byte/Float ... implements Comparable{
+
+	int compareTo(){
+
+	}
+
+
+}
+
+class String/StringBuffer  implements Comparable{
+	
+// -ve number already sorted
+// +ve number  needs to swap the objects
+
+	int compareTo(){
+			// logic to sort elements in ascending
+	}
+
+
+}
+
+
+
+TreeSet class can accept and sort only those class objects 
+	who implements comparable interface
+
+
+java.lang.Comparable;
+ int  compareTo();
+
+java.util.Comparator;
+ int compare();
+
+
+
+Two solutions are given for any Entity class to use in TreeSet/TreeMap
+
+1. class EntityClass implements Comparable interface
+
+2. Create seperate class MyComparator and implments Comparator interface
+    Ex:
+	class MyComparator  implements Comparator{
+
+		public int compare(){
+		// logic to sort elements
+		}
+	}
+   Set<Employee>  set = new TreeSet<Employee>(new MyComparator() );
+	
+
+
+
+Collections:
+-------------
+
+ArrayList
+Vector (legacy class , it is synchronize or thread safe)
+
+HashSet  (using with Entity class like Employee,Student,Customer)
+TreeSet
+
+HashMap
+TreeMap
+Hashtable (legacy class , it is synchronize)
+
+
+Iterator
+for each loop
+
+
+Comparable
+Comparator  (impelementation class used in above TreeSet Demo)
+
+
+
+Cursors:
+--------
+Iterator : hasNext() , next()
+Only forward/ Uni  direction
+It can be used for all types collections
+
+ListIterator: hasNext() , next() , hasPrevious() , previous();
+Bi-directional 
+It is used only with List family
+
+Enumeration:
+hasMoreElements() , nextElement()
+It is same as iterator , which is used only by legacy class
+
+
+
+Collections class
+Arrays class
+
+sorting and searching methods()
+
+
+
+
+	
+
