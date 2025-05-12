@@ -16,12 +16,19 @@ public class PstmtResultSetDemo {
 
 		List<Employee> list = getAllEmployees();
 
-		for (Employee employee : list) {
+		/*
+		 * for (Employee employee : list) {
+		 * 
+		 * System.out.println(employee);
+		 * 
+		 * }
+		 */
+		
+		
+		//list.forEach((e1)->{System.out.println(e1);});
 
-			System.out.println(employee);
-
-		}
-
+		list.forEach(System.out::println);
+		
 	}
 
 	public static List<Employee> getAllEmployees() {  // backend code
@@ -35,7 +42,7 @@ public class PstmtResultSetDemo {
 
 			PreparedStatement pstmt = conn.prepareStatement(select);
 
-			pstmt.setDouble(1, 70000);
+			pstmt.setDouble(1, 50000);
 
 			ResultSet rs = pstmt.executeQuery();
 

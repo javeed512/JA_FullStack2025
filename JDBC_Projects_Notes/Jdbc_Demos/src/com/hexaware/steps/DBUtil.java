@@ -12,7 +12,7 @@ public class DBUtil { // Factory class
 			
 			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());	
 			
-			Connection conn =	  DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb","root","admin");
+			Connection conn =	  DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","admin");
 				
 				return conn;
 			
