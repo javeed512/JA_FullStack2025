@@ -1,0 +1,25 @@
+
+
+IP-Address:
+An unique number/identity given to every machine to identify it on network.
+
+1.0.0.127
+23.9.81.77
+
+0-255
+
+localhost ---> local machine ip-address
+
+Port No:
+Unique number assign to every individual software/application.
+Ex: Notepad-3131 , Paint-5454 , Mysql-3306 
+
+-------------
+SQL Basics
+INSERT ,UPDATE, DELETE, SELECT Queries
+
+CRUD
+C - create record / insert record
+R - retrieve/ select record
+U - update record
+D - delete record
