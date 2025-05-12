@@ -1,0 +1,42 @@
+
+Layered Architecture:
+---------------------
+
+Presentation/UI Layer:
+main() 
+It will accept inputs from End User
+It will display outputs/errors to the End User
+It will interact with Service Layer and calls services/methods from Service Layer
+
+
+Service Layer:
+Service Layer will have business logics/services
+For service layer we always creates interfaces followed by implementation
+In this we also write input validations logics.
+We can also handle exceptions here
+It wil interact with DAO Layer (Data Access Object Layer)
+
+
+DAO Layer:
+It consist of Backend Database code / JDBC Code
+It will interact with Database directly.
+
+Entity/Pojo classes will be used to transfer data between layers
+
+
+
+
+Steps to develop any project:
+-----------------------------
+1. Create Database and tables
+2. Create Java Project with packages 
+   like entity,presentation,service,dao,exception
+3.Entity class with private properties along with constructors/setters/getters/toString
+4.Create Service interface in which declare methods and implement them in service implementation class
+5.Create Dao interface in which declare methods and implement them in dao implementation class  (in dao crud operations with jdbc code should be writtern)
+6. Custom Exceptions in exceptions package
+7.  Unit Test Classes  in test package
+
+
+
+
