@@ -1,0 +1,54 @@
+Lab Time:
+
+Revise and Practice:
+Hibernate ARchitecture and Steps
+
+1.Hibernate CRUD Operations --> save(),update(),saveOrUpdate() , get() ,delete()
+
+Queries:
+
+HQL queries  --> createQuery()
+
+Native/SQL queries --->  createNativeQuery()
+
+Named queries --->  createNamedQuery()
+
+common methods in above query types
+1. getSingleResult() // for select return single record
+2.  getResultList() // for select returns multiple records
+3.  executeUpdate() // for any DML query in above Query Types
+
+Note: all above query types can use positional param(?)   or named param(:name) also
+
+
+Department  d  = new  Department(10,"development")
+
+	e1 = new Employee(101,'king',5000,d);
+	e2 = new Employee(102,'tom',3000,d)
+
+		d.addEmp(e1);
+		d.addEmp(e2);
+
+
+public void   addEmployee(Employee emp) { // dept1.addEmployee(e1)
+		
+		emp.setDepartment(this);// here this keyword refer to current dept obj
+				
+				
+			Set<Employee>  set = getEmployeeSet();
+			
+				set.add(emp);
+				
+				
+	}
+
+
+
+
+
+
+
+
+
+
+
