@@ -19,8 +19,8 @@ public class HibernateSelectQuery {
 		    
 		    Session  session =			sessionFactory.openSession();
 		    
-		    //HQL or JPQL 
-		    String selectQuery = "select  e   from  Employee e where e.eid = ?1 AND  e.ename = ?2";
+		    //HQL or JPQL  with positional parameters
+		    String selectQuery = "select  e  from  Employee e where e.eid = ?1 AND  e.ename = ?2";
 		    
 		    Query<Employee>  query =		session.createQuery(selectQuery);
 		    
@@ -29,14 +29,16 @@ public class HibernateSelectQuery {
 			
 		    Employee emp =		query.getSingleResult();
 		    
+		    	//	query.executeUpdate(); // for DML Queries
+		    
 		    System.out.println(emp);
 		    
-		    
-		    String  selectQuery2 = "select e from Employee e  where  e.salary > ?1";
+		    // HQL query with named parameter
+		    String  selectQuery2 = "select e from Employee e  where  e.salary > :sal";
 		    
 		    Query<Employee>  query2 =		session.createQuery(selectQuery2);
 		    
-    		query2.setParameter(1, 10000.0);
+		    	query2.setParameter("sal", 15000.0);
     		
     		List<Employee>  list =		query2.getResultList();
 		    

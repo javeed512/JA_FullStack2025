@@ -3,8 +3,18 @@ package   com.hexaware.hibernate.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+
+
+@NamedQueries({
+	
+			@NamedQuery(name="getAllEmployees",query = "select e from Employee e"),
+			@NamedQuery(name="getBySalary",query="select e from Employee e   where e.salary > ?1")
+	
+})
 @Table(name="Emp_Table")
 @Entity
 public class Employee {
