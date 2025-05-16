@@ -74,8 +74,11 @@ class HelloServlet   extends  HttpServlet{
 
 }
 
+RequestDispatcher:
 
+  forward(request,response) ---> destination resource
 
+  include(request,response) --->  destination resource
 
 
 
