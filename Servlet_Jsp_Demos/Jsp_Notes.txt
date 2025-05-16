@@ -1,0 +1,97 @@
+JSP : Java Server Pages
+
+JSP: It is used to design/develop  dynamic web pages.
+
+HTML: It is used to design/develop  static web pages.
+
+JSP Advantages:
+
+In  Java Server Pages , we can write any HTML code and also any Java code.
+
+success.jsp ----> web server 
+
+
+Servlet :  Java code(use HTML)
+
+JSP:  HTML (use java code) 
+
+
+JSP Elements/Tags:
+-----------------
+
+1.JSP Scriplet   <%   java code  %>
+2.JSP Declaration  <%!   java code %>
+3.JSP Directives  <%@ page  %>
+demo.jsp -----> Demo_Servlet.java(Auto Generated Servlet) 
+				 ---> javac---> Demo.class ----> execute
+
+demo.jsp file 
+
+JSP Container/JSP Engine
+
+Demo_Servlet.java 
+// auto generated servlet
+
+import java.util.*;
+
+public  class  Demo_Servlet  extends HttpServlet{
+
+
+
+	public void m1(){
+		
+		
+	}
+	
+	static String city = "mumbai";
+	
+	 int eid = 0;
+
+
+
+	jspInit(){
+
+
+	}
+
+	jspService(HttpServletRequest request,HttpServletResponse response){
+
+
+		JspWriter  out;
+		HttpSession sesion;
+		ServletContext application;
+		
+		out.print("<h1>Welcome to JSP Page</h1>");
+
+		 String str = new String("javeed");
+    
+   		  int x = 99;
+
+	out.print(str);
+     	out.print("X value is : "+x);
+
+	
+
+		List  list = new ArrayList();
+
+Employee emp = (Employee)   session.getAttribute("e1");
+
+	}
+
+
+	jspDestroy(){
+
+
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
