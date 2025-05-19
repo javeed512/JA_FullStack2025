@@ -1,8 +1,12 @@
 package com.hexaware.springmvc.repository;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
@@ -34,6 +38,47 @@ public class EmployeeRepositoryImp implements IEmployeeRepository {
 		}
 
 		return count;
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+
+		
+		List<Employee> list = new ArrayList<Employee>();
+
+		try {
+			Connection conn = DBUtil.getDBConnection();
+
+			String select = "select * from Emp";
+
+			PreparedStatement pstmt = conn.prepareStatement(select);
+
+			ResultSet rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+
+				int eid = rs.getInt("eid");
+				double salary = rs.getDouble("salary");
+				String ename = rs.getString("ename");
+				Date doj = rs.getDate(4); // using column number in table ie. 4
+
+				Employee emp = new Employee(eid, ename, salary, doj);
+
+				list.add(emp);
+
+			}
+
+		
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return list;
+		
+		
+
 	}
 
 }

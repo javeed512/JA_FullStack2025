@@ -1,5 +1,7 @@
 package com.hexaware.springmvc.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,14 @@ public class EmployeeServiceImp implements IEmployeeService {
 
 
 		return repo.addEmployee(emp);
+	}
+
+
+	@Override
+	public List<Employee> getAllEmployees() {
+
+
+		return repo.getAllEmployees();
 	}
 
 }
