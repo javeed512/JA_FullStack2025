@@ -1,0 +1,22 @@
+
+Create New SpringBoot Project using min Java8 , Maven , Jar 
+
+Add dependencies:
+Spring Web , Spring Data JPA , Mysql driver , Validation 
+
+Create Project by following layered architecture 
+
+Project should have packages like
+
+com.hexaware.projectname.entities/models
+com.hexaware.projectname.services
+com.hexaware.projectname.repositories
+com.hexaware.projectname.restcontrollers
+com.hexaware.projectname.exceptions
+
+
+Create All Entities and perform required  mappings
+Create Repositories for all above entities
+Create Service Interfaces along with Service Implementation classes
+
+Write UnitTest cases for all service methods and Test them
