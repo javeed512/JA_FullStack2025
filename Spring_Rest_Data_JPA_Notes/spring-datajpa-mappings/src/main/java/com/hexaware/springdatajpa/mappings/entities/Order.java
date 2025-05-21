@@ -1,27 +1,27 @@
-package com.hexaware.hibernate.mapping.entity;
+package com.hexaware.springdatajpa.mappings.entities;
 
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name="order_master")
 public class Order {
 	
 	@Id
-	private int  orderId;
+	private int orderId;
 	private LocalDate purchaseDate;
 	
-	
 	@ManyToMany(cascade = CascadeType.ALL)
+	
 	@JoinTable(name="products_orders_table", 
 			joinColumns = {@JoinColumn(name="order_id")} ,
 			inverseJoinColumns = {@JoinColumn(name="product_id")}
