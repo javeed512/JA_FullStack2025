@@ -1,0 +1,36 @@
+[32m2025-05-22 18:09:13.175[0;39m [INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Starting SpringRestJpaApplication using Java 21.0.6 with PID 796 (D:\JABatch2_LocalRepo\SpringBoot_AllProjects\SpringBootTesting_Logging_SLF4J\spring-rest-jpa-demo\target\classes started by DELL in D:\JABatch2_LocalRepo\SpringBoot_AllProjects\SpringBootTesting_Logging_SLF4J\spring-rest-jpa-demo)
+[32m2025-05-22 18:09:13.178[0;39m [INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] No active profile set, falling back to 1 default profile: "default"
+[32m2025-05-22 18:09:13.868[0;39m [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[32m2025-05-22 18:09:13.922[0;39m [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+[32m2025-05-22 18:09:14.351[0;39m [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+[32m2025-05-22 18:09:14.359[0;39m [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+[32m2025-05-22 18:09:14.359[0;39m [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.18]
+[32m2025-05-22 18:09:14.450[0;39m [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+[32m2025-05-22 18:09:14.450[0;39m [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1216 ms
+[32m2025-05-22 18:09:14.579[0;39m [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+[32m2025-05-22 18:09:14.623[0;39m [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.20.Final
+[32m2025-05-22 18:09:14.625[0;39m [INFO] org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+[32m2025-05-22 18:09:14.878[0;39m [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+[32m2025-05-22 18:09:14.902[0;39m [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+[32m2025-05-22 18:09:15.218[0;39m [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bdcfcf
+[32m2025-05-22 18:09:15.220[0;39m [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+[32m2025-05-22 18:09:15.298[0;39m [WARN] org.hibernate.orm.deprecation [main] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[32m2025-05-22 18:09:15.300[0;39m [WARN] org.hibernate.orm.deprecation [main] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[32m2025-05-22 18:09:16.035[0;39m [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[32m2025-05-22 18:09:16.090[0;39m [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[32m2025-05-22 18:09:16.340[0;39m [INFO] org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+[32m2025-05-22 18:09:16.978[0;39m [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[32m2025-05-22 18:09:18.152[0;39m [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+[32m2025-05-22 18:09:18.171[0;39m [INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Started SpringRestJpaApplication in 5.362 seconds (process running for 6.01)
+[32m2025-05-22 18:14:32.567[0;39m [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[32m2025-05-22 18:14:32.569[0;39m [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+[32m2025-05-22 18:14:32.573[0;39m [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 4 ms
+[32m2025-05-22 18:14:32.759[0;39m [INFO] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-2] EmployeeRestController executed...
+[32m2025-05-22 18:14:32.775[0;39m [INFO] com.hexaware.springrestjpa.service.EmployeeServiceImp [http-nio-8080-exec-2] com.hexaware.springrestjpa.dto.EmployeeDTO@5b0fe4a0 is Added from Add Service
+[32m2025-05-22 18:14:33.025[0;39m [WARN] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-2] employee object is not null in RestController
+[32m2025-05-22 18:24:14.667[0;39m [INFO] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(17)-127.0.0.1] Application shutdown requested.
+[32m2025-05-22 18:24:14.675[0;39m [INFO] org.apache.catalina.core.StandardService [RMI TCP Connection(17)-127.0.0.1] Stopping service [Tomcat]
+[32m2025-05-22 18:24:14.676[0;39m [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [RMI TCP Connection(17)-127.0.0.1] Destroying Spring FrameworkServlet 'dispatcherServlet'
+[32m2025-05-22 18:24:14.686[0;39m [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(17)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+[32m2025-05-22 18:24:14.688[0;39m [INFO] com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(17)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+[32m2025-05-22 18:24:14.698[0;39m [INFO] com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(17)-127.0.0.1] HikariPool-1 - Shutdown completed.
