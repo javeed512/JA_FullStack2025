@@ -1,6 +1,7 @@
 package com.hexaware.springboot.exceptionhandling.restcontroller;
 
 import com.hexaware.springboot.exceptionhandling.SpringbootExceptionhandlingApplication;
+import com.hexaware.springboot.exceptionhandling.exp.CustomException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -47,6 +48,24 @@ public class CalculatorRestController {
 			  return  "Hello "+name.toUpperCase();
 			
 		}
+		
+		@GetMapping("/test/{name}")
+		public  String   test(@PathVariable String name)throws CustomException {
+			
+			
+				if(name.length() < 4) {
+					
+					
+					
+					throw  new  CustomException();
+					
+				}
+			
+			 return  name;
+			
+		}
+		
+		
 		
 		
 		/*
