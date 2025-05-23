@@ -1,0 +1,26 @@
+[32m2025-05-23 09:49[0;39m[INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Starting SpringRestJpaApplication using Java 21.0.6 with PID 11420 (D:\JABatch2_LocalRepo\SpringBoot_AllProjects\SpringBootTesting_Logging_SLF4J\spring-rest-jpa-demo\target\classes started by DELL in D:\JABatch2_LocalRepo\SpringBoot_AllProjects\SpringBootTesting_Logging_SLF4J\spring-rest-jpa-demo)
+[32m2025-05-23 09:49[0;39m[INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] No active profile set, falling back to 1 default profile: "default"
+[32m2025-05-23 09:49[0;39m[INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Started SpringRestJpaApplication in 4.884 seconds (process running for 10.99)
+23 09:49[0;39m[DEBUG] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Running with Spring Boot v3.1.8, Spring v6.0.16
+[32m2025-05-[32m2025-05-23 09:53[0;39m[INFO] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-7] EmployeeRestController executed...
+[32m2025-05-23 09:53[0;39m[INFO] com.hexaware.springrestjpa.service.EmployeeServiceImp [http-nio-8080-exec-7] com.hexaware.springrestjpa.dto.EmployeeDTO@50a3c436 is Added from Add Service
+[33m2025-05-23 09:53[0;39m[WARN] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-7] employee object is not null in RestController
+[32m2025-05-23 09:53[0;39m[DEBUG] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-7] debugging from RestController
+[32m2025-05-23 10:02[0;39m[INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Starting SpringRestJpaApplication using Java 21.0.6 with PID 14064 (D:\JABatch2_LocalRepo\SpringBoot_AllProjects\SpringBootTesting_Logging_SLF4J\spring-rest-jpa-demo\target\classes started by DELL in D:\JABatch2_LocalRepo\SpringBoot_AllProjects\SpringBootTesting_Logging_SLF4J\spring-rest-jpa-demo)
+[32m2025-05-23 10:02[0;39m[DEBUG] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Running with Spring Boot v3.1.8, Spring v6.0.16
+[32m2025-05-23 10:02[0;39m[INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] No active profile set, falling back to 1 default profile: "default"
+[32m2025-05-23 10:02[0;39m[INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Started SpringRestJpaApplication in 4.819 seconds (process running for 5.45)
+[32m2025-05-23 10:16[0;39m[INFO] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-2] EmployeeRestController executed...
+[32m2025-05-23 10:16[0;39m[DEBUG] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-2] debugging from RestController
+[32m2025-05-23 10:17[0;39m[INFO] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-3] EmployeeRestController executed...
+[32m2025-05-23 10:17[0;39m[DEBUG] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-3] debugging from RestController
+[32m2025-05-23 10:17[0;39m[INFO] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-4] EmployeeRestController executed...
+[32m2025-05-23 10:17[0;39m[DEBUG] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-4] debugging from RestController
+[32m2025-05-23 10:19[0;39m[INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Starting SpringRestJpaApplication using Java 21.0.6 with PID 18080 (D:\JABatch2_LocalRepo\SpringBoot_AllProjects\SpringBootTesting_Logging_SLF4J\spring-rest-jpa-demo\target\classes started by DELL in D:\JABatch2_LocalRepo\SpringBoot_AllProjects\SpringBootTesting_Logging_SLF4J\spring-rest-jpa-demo)
+[32m2025-05-23 10:19[0;39m[DEBUG] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Running with Spring Boot v3.1.8, Spring v6.0.16
+[32m2025-05-23 10:19[0;39m[INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] No active profile set, falling back to 1 default profile: "default"
+[32m2025-05-23 10:19[0;39m[INFO] com.hexaware.springrestjpa.SpringRestJpaApplication [main] Started SpringRestJpaApplication in 4.62 seconds (process running for 5.256)
+[32m2025-05-23 10:19[0;39m[INFO] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-2] EmployeeRestController executed...
+[32m2025-05-23 10:19[0;39m[INFO] com.hexaware.springrestjpa.service.EmployeeServiceImp [http-nio-8080-exec-2] com.hexaware.springrestjpa.dto.EmployeeDTO@5672106b is Added from Add Service
+[33m2025-05-23 10:19[0;39m[WARN] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-2] employee object is not null in RestController
+[32m2025-05-23 10:19[0;39m[DEBUG] com.hexaware.springrestjpa.restcontroller.EmployeeRestController [http-nio-8080-exec-2] debugging from RestController
