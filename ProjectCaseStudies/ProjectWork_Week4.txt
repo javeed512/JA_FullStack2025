@@ -20,3 +20,20 @@ Create Repositories for all above entities
 Create Service Interfaces along with Service Implementation classes
 
 Write UnitTest cases for all service methods and Test them
+
+
+RestController implementation
+
+Rest API Testing using Postman / Swagger UI
+
+
+add DTO classes
+add Logs to the logger file
+Input validations (in service class and using validation annotations )
+
+
+Try to Add  minimum  Microservice
+
+
+
+
