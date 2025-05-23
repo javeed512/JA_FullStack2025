@@ -1,0 +1,83 @@
+
+Microservices assignment:
+
+Take any 2 entities from case study to create 2 seperate microservices(2 springboot projects)
+
+
+Example:
+
+Doctor MicroService
+
+--------------
+
+Restcontroller:          ---> Service  ----> Repository ---> Doctor DB
+ @Post
+ Doctor  addDoctor(DoctorDTO dto){
+
+}
+
+@Get
+ Doctor getDoctorById(int doctorId){
+
+}
+
+@Get
+List<Doctor>  getAllDoctors(){
+
+
+}
+
+@GetMapping(/getpatient/{patientId})
+Patient     getPatientById(int patientId){
+
+Patient p =restTemplate.get("patient microservice url for getPatientById",Patient.class)
+}
+
+@PutMapping
+Patient updatePatientByDoctor(PatientDTO dto){
+
+		void  restTemplate.put("patient ms  url for update method")
+
+	return	getPatientById(dto.getPatientId())
+
+}
+
+// add patient and delete patient
+
+
+
+---------------------------------------------
+
+Patient  MicroService:
+
+RestController
+
+@Post
+Patient    addPatient(PatientDTO dto){
+
+}
+
+@Put
+Patient   updatePatient(PatientDTO dto){
+
+}
+
+
+ @Get
+Patient  getPatientById(int  patientId){
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
