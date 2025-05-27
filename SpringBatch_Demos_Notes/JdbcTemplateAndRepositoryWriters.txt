@@ -1,0 +1,27 @@
+
+1.Using PersonRepository here:
+---------------------------------
+
+@Autowired
+PersonRepository personRepository;
+
+ @Bean
+    public RepositoryItemWriter<Person> writer() {
+        RepositoryItemWriter<Person> writer = new RepositoryItemWriter<>();
+        writer.setRepository(personRepository);
+        writer.setMethodName("save");
+        return writer;
+    }
+
+======================================================================================
+2.JdbcBatch for inserting person record (writing sql query manually)
+
+---------------
+  @Bean
+    public JdbcBatchItemWriter<Person> writer(DataSource dataSource) {
+        return new JdbcBatchItemWriterBuilder<Person>()
+                .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
+                .sql("INSERT INTO Person (first_name, last_name) VALUES (:firstName, :lastName)")
+                .dataSource(dataSource)
+                .build();
+    }
