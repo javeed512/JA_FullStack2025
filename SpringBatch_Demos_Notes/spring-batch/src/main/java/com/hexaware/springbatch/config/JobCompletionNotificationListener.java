@@ -18,6 +18,8 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
     private static final Logger log = LoggerFactory.getLogger(JobCompletionNotificationListener.class);
 
     private final JdbcTemplate jdbcTemplate;
+    
+    
 
     @Autowired
     public JobCompletionNotificationListener(JdbcTemplate jdbcTemplate) {
@@ -25,7 +27,12 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
     }
 
     @Override
-    public void afterJob(JobExecution jobExecution) {
+    public  void afterJob(JobExecution jobExecution) {
+    	
+    	
+    	
+    	
+    	
         if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
             log.info("Job finished, checking the results...");
 
@@ -33,7 +40,7 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
                     (rs, row) -> new Person(
                             rs.getString(1),
                             rs.getString(2))
-            ).forEach(person -> log.info("Found <" + person + "> in the database."));
+            ).forEach(person -> System.out.println(person));
         }
     }
     

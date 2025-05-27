@@ -6,6 +6,7 @@ package com.hexaware.springbatch.config;
 import javax.sql.DataSource;
 
 import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionException;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.JobParametersBuilder;
@@ -20,6 +21,7 @@ import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilde
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.support.transaction.ResourcelessTransactionManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,6 +32,14 @@ import com.hexaware.springbatch.entity.Person;
 
 @Configuration
 public class BatchConfig {
+	
+	@Autowired
+	JobCompletionNotificationListener  listener;
+	
+	
+	
+	
+	
 
     @Bean
     public FlatFileItemReader<Person> reader() {
@@ -38,6 +48,7 @@ public class BatchConfig {
                 .resource(new ClassPathResource("data.csv"))
                 .delimited()
                 .names(new String[]{"firstName", "lastName"})
+                .linesToSkip(1)
                 .fieldSetMapper(fieldSet -> {
                     Person person = new Person();
                     person.setFirstName(fieldSet.readString("firstName"));
@@ -85,8 +96,16 @@ public class BatchConfig {
                         .addLong("time", System.currentTimeMillis())  // unique parameter
                         .toJobParameters();
 
-                jobLauncher.run(job, jobParameters);
+              JobExecution jobExecution =  jobLauncher.run(job, jobParameters);
+                
+              
+                
                 System.out.println("Batch job has been invoked.");
+                
+                
+                listener.afterJob(jobExecution);
+                
+                
             } catch (JobExecutionException e) {
                 System.err.println("Job failed: " + e.getMessage());
             }
@@ -97,5 +116,9 @@ public class BatchConfig {
     public PlatformTransactionManager transactionManager() {
         return new ResourcelessTransactionManager(); // For simple batch processing without needing a real database transaction manager.
     }
+    
+   
+    
+    
     
 }
