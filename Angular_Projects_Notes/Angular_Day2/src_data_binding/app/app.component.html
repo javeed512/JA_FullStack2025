@@ -1,0 +1,32 @@
+
+<h1>App Component</h1>
+
+
+String Interpolation: <br>
+
+User Name: {{username}}  <br>
+Salary : {{salary}}   <br>
+
+Exp:  {{ 1 + 2 + 3 }}  <br>
+
+function:  {{ display() }} <br>
+
+
+Property Binding: <br>
+
+Enter name : <input type="text"  [value]="username"> <br>
+
+Input Types : <input  [type]="tname" />  <br>
+
+<img [src]="imageUrl" alt="car image"/>  <br>
+
+
+<button type="button"    (click)="show()">Show</button>
+
+
+<h2>Two way data binding using ngModel</h2>
+<form >
+
+Enter Name:  <input type="text" name="username"  [(ngModel)]="username"  >
+
+</form>
