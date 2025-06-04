@@ -1,0 +1,68 @@
+
+<h1>App Component</h1>
+
+
+
+ngIf directive <br>
+
+<h2  *ngIf="true">Hello friends</h2>
+
+ngSwitch directive <br>
+
+Enter Choice : <input type="text" name="day"   [(ngModel)]="day">
+
+<div  [ngSwitch]="day">
+
+
+ <div  *ngSwitchCase="'one'">Monday</div>
+ <div  *ngSwitchCase="2">Tuesday</div>
+ <div  *ngSwitchCase="3">Wednesday</div>
+ <div  *ngSwitchCase="4">Thursday</div>
+ <div  *ngSwitchCase="5">Friday</div>
+ <div  *ngSwitchDefault>Its weekend or Invalid Option</div>
+
+
+
+</div>
+
+
+
+Enter Course : <input type="text" name="course"   [(ngModel)]="course">
+
+<div  [ngSwitch]="course">
+
+
+ <div  *ngSwitchCase="'java'"> <img src="/assets/java.png" alt="java logo">  </div>
+ <div  *ngSwitchCase="'python'">   <img src="/assets/python.png" alt="python logo"> </div>
+ <div  *ngSwitchCase="'sql'">   <img src="/assets/sql.png" alt="sql logo"></div>
+ 
+ <div  *ngSwitchDefault> <img src="/assets/nothing.png" alt="invalid logo"></div>
+
+
+
+</div>
+
+
+NgStyle Directive <br>
+
+<div  [ngStyle]="{'color':mycolor,'background-color':bgcolor}" >This is NgStyle  directive text</div>
+
+
+
+NgClass Directive <br>
+
+<div [ngClass]="val > 10 ? 'red' : 'green'" >Hello friends this is NgClass styles</div> <br>
+
+<div [ngClass]="{color:mycolor}">Hello Javeed</div>
+
+NgFor Directives: <br>
+<!--  ngFor can be use in any block elements like div , table , ol , ul , dropdown   -->
+<div *ngFor="let  i  of  list; let x = index">
+
+    <h1>{{x}} : {{i}}</h1>
+
+</div>
+
+<h1  ngNonBindable> {{I am Javeed}} </h1>
+
+
