@@ -1,0 +1,39 @@
+
+<h1>App Component</h1>
+
+<form class="container col-lg-4"  [formGroup]="registerForm"  (ngSubmit)="fetchFormData()">
+
+
+    <div class="form-group">
+
+        UserName : <input type="text" formControlName="username" pattern="[A-Z]{5}"  required  class="form-control"  [ngClass]="{'is-invalid':submitted && f['username'].errors }" >
+            <span style="color:red"   *ngIf="submitted && f['username'].errors?.['required']">User Name is required</span>
+            <span style="color:red"   *ngIf="submitted && f['username'].errors?.['pattern']">User Name should start with Uppercase max 5 char</span>
+
+    </div>    
+
+    <div>
+    <label>Password</label> 
+    <input type="text" formControlName="pwd"  required class="form-control"   [ngClass]="{'is-invalid':submitted && f['pwd'].errors}">
+
+        
+    <div style="color: red;"  *ngIf="submitted && f['pwd'].errors?.['required']">Password is required</div>
+  <div style="color: red;"  *ngIf="submitted && f['pwd'].errors?.['minlength']">Password should be min 4 chars</div>
+  <div style="color: red;"  *ngIf="submitted && f['pwd'].errors?.['maxlength']">Password should be max 10  chars</div>
+
+
+
+    </div>
+
+    <label>Email</label> <input type="email" formControlName="email"  required class="form-control"   [ngClass]="{'is-invalid':submitted && f['email'].errors}">
+
+    <div style="color: red;"  *ngIf="submitted && f['email'].errors?.['required']">Email is required</div>
+    <div style="color: red;"  *ngIf="submitted && f['email'].errors?.['email']">Email should be in valid format</div> 
+
+
+
+  <button type="submit"  class="btn btn-success">Submit</button>
+
+
+
+</form>
