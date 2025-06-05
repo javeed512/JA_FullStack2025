@@ -1,0 +1,47 @@
+
+<h1>App Component</h1>
+
+<h2>Angular Template Driven Form</h2>
+
+
+
+<form   #empForm="ngForm" class="container col-md-5"  (ngSubmit)="fetchFormData(empForm.value)">
+
+    <div class="form-group">
+    Enter Eid : <input type="number" name="eid"  class="form-control"  required  ngModel  #eidControl="ngModel" >
+    <span  style="color:red"  *ngIf="eidControl.touched && eidControl.invalid">Eid is Mandatory</span> 
+    </div> 
+
+    <div class="form-group"> 
+    Enter EName : <input type="text" name="ename" class="form-control"  required  ngModel  #enameControl= "ngModel">
+    <span  style="color:red"  *ngIf="enameControl.touched && enameControl.invalid">EName is Mandatory</span> 
+    </div>
+
+    <div class="form-group">
+    Enter Salary : <input type="number" name="salary" class="form-control"  required ngModel  #salaryControl="ngModel" min="100" (focus)="test(salaryControl.value)">
+    <span  style="color:red"  *ngIf="salaryControl.touched &&  salaryControl.value <= 0 ">Salary is Mandatory</span>
+   
+    </div>
+
+    <div class="form-group">
+    Enter EMail : <input type="text" name="email" class="form-control" required  ngModel  #emailControl="ngModel"  email>
+      <div  *ngIf="emailControl.touched">
+    <span  style="color:red"  *ngIf="emailControl.errors?.['required']">Email is Mandatory</span> 
+    <span style="color:red"  *ngIf="emailControl.errors?.['email']">Enter Valid Email format</span>
+     </div>
+    </div>
+
+    
+
+
+    <button type="submit" class="btn btn-primary"  [disabled]="empForm.invalid">Submit</button>
+
+
+
+
+</form>
+
+
+<br>
+
+Employee Details: {{ emp | json   }}
