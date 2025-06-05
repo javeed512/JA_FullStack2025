@@ -1,0 +1,10 @@
+
+<h1>App Component</h1>
+
+
+
+<app-child    [inputData]="parentData"    [input2]="jsonData"   (emitterEvent)="fetchChildData($event)" ></app-child>
+
+<br>
+
+Data from Child to Parent : {{ data }}
