@@ -36,7 +36,8 @@ home.component.ts
 
         console.log('navigating to payment page from home component');
 
-        this.router.navigate(['/payment/'+this.amount]);    // this navigate method will route request from home page to payment page along with one 								          // parameter amount
+        this.router.navigate(['/payment/'+this.amount]); 
+   // this navigate method will route request from home page to payment page along with one 								          // parameter amount
 
     }
 
