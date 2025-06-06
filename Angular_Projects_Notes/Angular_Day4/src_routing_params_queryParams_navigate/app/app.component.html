@@ -1,0 +1,23 @@
+
+
+<router-outlet></router-outlet>
+
+<h1>App Component</h1>
+
+
+<a routerLink="/home">Home Page</a>  <br>
+
+<a routerLink="/contactus"  [queryParams]="{name:'king',mno:'9977332211',city:'Pune'}" >Contact Us Here</a> <br>
+
+<button routerLink="/aboutus"  class="btn btn-primary">Read About Us</button> <br>
+
+<button routerLink="/call" class="btn btn-success">Call Us </button> <br> <br>
+
+
+<a routerLink="/customer/{{username}}/{{password}}">Customer Page</a>  <br>
+
+<br>
+
+<button (click)="go()">Go</button>
+
+
