@@ -1,0 +1,82 @@
+
+
+
+
+<ng-content >Welcome to AppComponent</ng-content>
+
+<app-demo>
+
+
+  <strong class="app">Employee King</strong>
+  <strong class="app1">Salary 50000</strong>
+
+  <div class="user"> {{users[0] | json}} </div>
+
+</app-demo>
+
+<br>
+
+<app-hello></app-hello>
+
+
+
+<div>
+
+  @let  userDetails = users[0];
+
+  {{ userDetails | json }}
+
+
+</div>
+
+
+
+<h1>old *ngFor</h1>
+
+
+ <ul *ngFor="let user of users">
+
+  <li>{{user.id}}  {{user.name}}  {{user.age}}</li>
+
+
+</ul> 
+
+<br>
+
+<h1>New  for loop</h1>
+
+<ul>
+
+  @for(user of users; track user; let i = $index){
+
+   <li> {{i}}  ===> {{user.id}}  {{user.name}}  {{user.age}}</li>
+
+    <!-- <li>{{user  | json}}</li> -->
+
+
+  }
+
+  @empty{
+
+      <li>No User Record Found </li>
+
+  }
+
+
+</ul>
+
+
+<br>
+
+
+
+
+
+<ng-template [ngIf]="isLoggedIn">
+  <ng-container *ngFor="let user of users">
+    <p>{{ user.name }} {{user.age}}</p>
+  </ng-container>
+</ng-template>
+
+
+

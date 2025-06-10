@@ -1,0 +1,60 @@
+<p>hello works!</p>
+
+
+<div>Default header </div>
+
+<div>Default main content </div>
+
+<div>Default footer </div>
+
+
+
+<ng-content select="header"> Default header </ng-content>
+
+<ng-content> Default main content </ng-content>
+
+<ng-content select="footer"> Default footer </ng-content>
+
+<br>
+
+
+
+@if (a > b) {
+    <p>{{ a }} is greater than {{ b }}</p>
+  }
+
+
+  <br>
+
+
+  @if (a > b) {
+    {{ a }} is greater than {{ b }}
+  } @else if (b > a) {
+    {{ a }} is less than {{ b }}
+  } @else {
+    {{ a }} is equal to {{ b }}
+  }
+
+  <br>
+
+  @switch (color) { 
+    @case ("red") {
+        <div>Red</div>
+      } 
+      @case ("blue") {
+        <div>Blue</div>
+      } 
+      @default {
+        <div>Default</div>
+      } 
+    
+  }
+
+
+  <br>
+
+  <h2>Data pass in selector from app.html as follows</h2>
+
+  
+
+  
