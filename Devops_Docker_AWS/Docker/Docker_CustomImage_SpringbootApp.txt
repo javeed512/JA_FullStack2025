@@ -44,6 +44,27 @@ http://localhost:8081  ---> send request to container
 
 
 
+Note: In case maven build fail to create spring docker image then add following configuration in pom.xml file
+
+
+----------------------------------------------
+<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <imageName>name-of-docker-image</imageName>
+                </configuration>
+            </plugin>
+
 
 
 
