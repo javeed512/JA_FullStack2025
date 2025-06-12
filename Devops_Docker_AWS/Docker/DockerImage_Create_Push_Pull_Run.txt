@@ -1,0 +1,67 @@
+
+Before creating docker image copy <plugin> to the pom.xml file
+
+<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <imageName>name-of-docker-image</imageName>
+                </configuration>
+            </plugin>
+
+
+-----------------------------------------------------------------
+
+
+step1: Go to any spring boot application folder and run following command 
+		to create docker image
+
+-> mvn   spring-boot:build-image
+
+Now , Start/Run Docker Desktop and ensure Docker engine is Running..
+
+To see all images
+
+-> docker images  (it shows all images in docker desktop)
+
+Step2: How run docker image
+
+-> docker run  -p  8181:8080  image-name
+
+Now, once application started go to browser and test it using url
+ localhost:8181/url-pattern
+
+-------------------------
+
+How to push image to the docker hub?
+Before we push docker images to the dockerHub we must login to dockerHub portal.
+
+To Login use below command:
+-> docker login   (very first time it will ask username and password)
+
+1. Create docker image tag as follows
+
+  -> docker tag    image-name    new_tag_name
+
+Note: new_tag_name should be  DockerHub username  /  anyreference name
+Ex:  docker tag    image-name  javeed512/myappimage:v1.0
+
+2. Push docker image to the docker Hub
+
+ ->  docker push  javeed512/myappimage:v1.0
+
+Now, go and check in docker hub it will be visible. Once its available pulicly on dockerHub anybody can pull it to their docker desktop.
+
+
+
+
+
